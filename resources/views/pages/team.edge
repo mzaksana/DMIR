@@ -1,0 +1,47 @@
+@layout('_layout.main')
+
+@section('content')
+
+    <main>
+
+        <section class="features section text-center section-first">
+            <div class="container">
+                <div class="features-inner section-inner">
+                    <div class="features-wrap">
+
+                    @each(member in members)
+                      <div class="col-9">
+                        <div class="card mb-3">
+                          <div class="row no-gutters">
+                            <div class="col-md-4">
+                              <img class="photo-profile" src="{{assetsUrl('images/'+member.photo)}}" alt="">
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body text-left">
+                                <h4 class="feature-title h3-mobile">{{member.name_m}}</h4>
+                                <p class="">{{getNText(member.skill_m,10)}}</p>
+                                <p class="text-sm">{{member.intro_m}}</p>
+                                <ul class="footer-social-links list-reset item-flex-start">
+                                  @each((name,key) in member.sosmed_m)
+                                  <li>
+                                    <a href="//{{name}}" target="_blank">
+                                      <i class="{{getCategoryFont(key)}} fa-{{key}}"></i>
+                                    </a>
+                                  </li>
+                                  @endeach
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+						        @endeach
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+@endsection

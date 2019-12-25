@@ -1,0 +1,26 @@
+@layout('_layout.main')
+
+@section('content')
+    <main>
+        <section class="features section text-center section-first">
+            <div class="container">
+                <div class="features-inner section-inner">
+                    <div class="features-wrap">
+						@each(item in project)
+							<div class="feature is-revealing">
+								<div class="feature-inner content-card"  onclick="read({{item.id_p}},'research')">
+									<div class="feature-icon">
+										<img class="photo-profile" src="{{assetsUrl('images/'+item.img)}}" alt="">
+									</div>
+									<h4 class="feature-title h3-mobile text-left">{{item.name_p}}</h4>
+									<p class="text-sm text-left">{{getNText(item.desc_p,175)}}</p>
+								</div>
+							</div>
+						@endeach
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+@endsection

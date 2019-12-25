@@ -1,32 +1,13 @@
-# Adonis fullstack application
+# DMIR ~ Data Mining and Information Retrieval
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+Web aplication DMIR Research Group.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+## Web Aplication Structure
 
-## Setup
+### Actor and Activity
 
-Use the adonis command to install the blueprint
+- see/docs/workflow.drawio
 
-```bash
-adonis new yardstick
-```
+### ER Databases
 
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
-# DMIR
+- see /docs/database.drawio

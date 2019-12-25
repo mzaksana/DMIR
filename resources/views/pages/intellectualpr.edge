@@ -1,0 +1,27 @@
+@layout('_layout.main')
+
+@section('content')
+        
+    <main>
+        <section class="features section text-center section-first">
+            <div class="container">
+                <div class="features-inner section-inner">
+                    <div class="features-wrap">
+						@each(item in ipr_project)
+						<div class="feature is-revealing">
+								<div class="feature-inner content-card" onclick="read({{item.id_i}},'intellectualpr','{{item.name_p}}')">
+									<div class="feature-icon">
+										<img class="photo-profile" src="{{assetsUrl('images/'+item.img)}}" alt="">
+									</div>
+									<h4 class="feature-title h3-mobile">{{item.name_p}}</h4>
+									<p class="text-sm">{{getNText(item.desc_i,95)}}</p>
+								</div>
+							</div>
+						@endeach
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+@endsection
